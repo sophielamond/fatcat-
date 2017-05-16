@@ -1,0 +1,133 @@
+ <!--don't forget semicolons at the end of commands  -->
+
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+	<title> this is a new file where I am going to practice javascript </title>
+<style type="text/css"> 
+
+
+
+#cat_pic { 
+	height: 300px;
+	width: 300px;
+	text-align: center;
+	 
+}
+
+#feed_button { 
+
+
+	color:green; 
+	height: 60px;
+	width: 60px;
+	 
+}
+
+#starve_button {
+
+	color:red; 
+	height: 60px;
+	width: 60px;
+	 
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+<img src='cat.jpg' id='cat_pic'> 
+<div><button id='feed_button'>Feed</button>
+<button id='starve_button'>Starve</button></div>
+
+
+<div style='text-align: left; color: red; font-family:"comic sans ms"''> <i>feed me</i> </div>
+
+<script type ="text/javascript"> 
+
+// don't forget curly brackets 
+
+
+console.log(Plotly)
+
+var d3 = Plotly.d3; 
+
+var cat_pic = d3.select('#cat_pic') 
+
+
+
+cat_pic.on('click', function(){
+	window.alert('Meowww!'); 
+})
+
+	
+
+	var feed_button = d3.select('#feed_button')
+
+feed_button.on('click', function(){
+
+	var current_width = parseInt(cat_pic.style('width')) 
+	var current_height = parseInt(cat_pic.style('height'))
+
+	cat_pic.style('width', (current_width +30)+'px')
+	cat_pic.style('height', (current_height +30)+'px')
+})
+
+
+
+	var starve_button = d3.select('#starve_button')
+
+starve_button.on('click', function(){
+
+	var current_width = parseInt(cat_pic.style('width')) 
+	var current_height = parseInt(cat_pic.style('height'))
+
+	cat_pic.style('width', (current_width -30)+'px')
+	cat_pic.style('height', (current_height -30)+'px')
+
+});
+
+	
+
+
+
+	// window.alert = pop up 
+
+
+// array = list 
+
+var my_array = [1,2,3,4,5, 'sophie'];
+
+console.log('My Array')
+console.log(my_array) 
+
+
+// object - second kind of container 
+
+var my_object = { 
+	my_name: 'Sophie', 
+	my_age: '30', 
+	
+}
+
+	console.log('My Object')
+	console.log(my_object)
+
+
+
+
+
+
+
+
+
+</script>
+
+
+</body>
+</html>
